@@ -4,7 +4,7 @@
 
 **[Play the current preview](https://sept-relatives-composed-asbestos.trycloudflare.com/)** · [Full rules & advanced items](RULES.md) · [Printable rulebook](output/pdf/Sweep-Brawl-Rulebook-v080.pdf) · [Hosting status](DEPLOYMENT.md)
 
-The current public link is a temporary Cloudflare preview. The full game runs on Node and Socket.io. A private Sites project has been created; its multiplayer hosting adaptation is in preparation and is not yet published.
+The public preview is temporary and runs on Node/Socket.io. **[Open the hosted Sites review](https://sweep-brawl.warmpearl1024.chatgpt.site)** (owner-only during review). The Sites edition preserves the game rules and interface, with persistent rooms and authenticated player updates adapted for hosting.
 
 ![Sweep Brawl gameplay and ghost haunting](docs/demo.gif)
 
