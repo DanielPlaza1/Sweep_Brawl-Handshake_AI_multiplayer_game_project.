@@ -1,0 +1,22 @@
+{
+  "name": "sweep-brawl",
+  "version": "0.8.0",
+  "private": true,
+  "type": "module",
+  "description": "A server-authoritative multiplayer Minesweeper party game.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test",
+    "share": "node scripts/share.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "socket.io-client": "^4.8.1"
+  }
+}

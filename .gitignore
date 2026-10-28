@@ -1,0 +1,16 @@
+node_modules/
+.tools/
+*.log
+.env
+.env.*
+!.env.example
+artifacts/
+.DS_Store
+tmp/
+__pycache__/
+sites/
+.sites-runtime/
+.wrangler/
+output/pdf/*
+!output/pdf/Sweep-Brawl-Rulebook-v080.pdf
+/Sweep-Brawl-Rulebook-v070.pdf
