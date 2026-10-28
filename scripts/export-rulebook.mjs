@@ -1,0 +1,15 @@
+import {writeFileSync,mkdirSync,readFileSync} from 'node:fs';
+import {dirname} from 'node:path';
+import {ITEMS,RARITY_CHANCES} from '../lib/items.js';
+import {ITEM_DETAILS} from '../lib/item-reference.js';
+import {SCORING} from '../lib/solver.js';
+import {SCORE_BONUSES} from '../lib/game.js';
+import {BOARD_DIFFICULTIES} from '../lib/round-tools.js';
+import {BALANCE,PARTY_ITEMS} from '../lib/balance.js';
+const path=process.argv[2]||'tmp/pdfs/rulebook-data.json';
+for(const item of ITEMS)if(!ITEM_DETAILS[item.id]?.length)throw Error('Missing reference: '+item.id);
+mkdirSync(dirname(path),{recursive:true});
+writeFileSync(path,JSON.stringify({version:'0.8.0',items:ITEMS.map(item=>({...item,details:ITEM_DETAILS[item.id]})),rarityChances:RARITY_CHANCES,scoring:SCORING,bonuses:SCORE_BONUSES,boards:BOARD_DIFFICULTIES,balance:BALANCE,partyItems:PARTY_ITEMS},null,2));
+const base=readFileSync('RULES.md','utf8').split('\n## Advanced item reference')[0];
+writeFileSync('RULES.md',base+'\n\n## Advanced item reference\n\nAll '+ITEMS.length+' current items follow. Party mode offers the curated subset; All items opens the complete catalog. These advanced explanations include interactions omitted from the compact cards.\n\n'+ITEMS.map(item=>'### '+item.name+'\n\n**'+[item.rarity.toUpperCase(),item.when.replaceAll('-',' ').toUpperCase(),...(item.charges?[item.charges+' CHARGES']:[]),...(item.afterFirstClear?['AFTER FIRST CLEAR']:[]),...(item.needsLives?['DISABLED WITH UNLIMITED LIVES']:[])].join(' / ')+'**\n\n'+item.description+'\n\n'+item.activationHint+'\n\n'+ITEM_DETAILS[item.id].join('\n\n')+'\n\n').join(''));
+console.log('Exported '+ITEMS.length+' item references.');
