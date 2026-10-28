@@ -13,6 +13,8 @@
 
 ## Browser acceptance
 
+Board controls update: new lobbies default to 15 seconds, the timer is inside the board bar, floating log panels are absent, and flags use reversible local previews. Cells/cards acknowledge pending actions immediately, duplicate clicks are ignored while pending, and Sites polling yields to active player requests.
+
 Sites responsiveness patch: idle room polls return a small unchanged response without a storage write until the heartbeat is due. Verified the timer dropdown remains open across polls and a second player joining, and its chosen value persists. Hosting/client tests cover unchanged state suppression and the read-only idle path.
 
 Checked October 28, 2026: ghost flag budget and icon, ghost-owned anytime items, disabled turn-only items, merged Risk Scanner preview, Reset revival/first clear, independent ghost spook, zero-mine results, shared flag payout, Party default, all four bot selectors, and layouts at 390×844 and 844×390. Browser console had no warnings or errors. The procedural cues are wired and covered by interaction checks; a human listening pass remains recommended. All 26 PDF pages were rendered and reviewed; all 62 item names were verified. The public WebSocket smoke test passed with two independent clients.

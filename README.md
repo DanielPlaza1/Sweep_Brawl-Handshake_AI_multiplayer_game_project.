@@ -15,7 +15,7 @@ The public preview is temporary and runs on Node/Socket.io. **[Open the hosted S
 - Party’s curated 30-card pool is the lobby default; All items opens the full 62-card catalog. Guaranteed rare and legendary offer slots improve every round.
 - Deduction-first points, low rewards for reckless guesses, visible Underdog bonuses and an eight-times total award cap.
 - Forced Jest, persistent Plated Armor, lethal Glass Cannon mines, capped healing and a late-board Danger zone.
-- Procedural action sounds, avatar popups, persistent personal battle callouts and round replay.
+- Procedural action sounds, avatar popups, left-side activity and round replay. Flags respond immediately; cells and cards show instant pending feedback while the server confirms results. New lobbies use a 15-second turn timer, displayed in the board bar.
 
 ## Run
 

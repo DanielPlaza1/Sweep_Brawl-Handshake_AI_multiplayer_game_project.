@@ -44,7 +44,7 @@ Left-click uses the selected Reveal or Flag action; right-click uses the opposit
 
 Shared flags show owner colors and earn +5 base points per correct owner/cell at round end. Wrong shared flags and all private flags earn zero. Each player’s shared flag cap is the counted remaining mine total. Private flags are personal notes. Multiple owners’ dots stack vertically under separate shared/private-eye icons. Expose can privately show other players’ current private flags to its user. Ghost Flags are cosmetic and separate from both types.
 
-Colored cell borders identify who cleared each manual cell and cascade. The left activity feed uses green for benefits, gray for neutral actions and red for harm to the viewer. Damage, zaps and other effects also float over affected avatars. Personal callouts stay visible for about 6.5 seconds; your own item uses stay visible for about 4.5 seconds. Mine, zap, hit, shield and victory/high-risk-guess sounds are synthesized locally. The sound toggle and volume control apply to these cues as well as turn cues. Browser audio starts only after a user gesture.
+Colored cell borders identify who cleared each manual cell and cascade. The left activity feed uses green for benefits, gray for neutral actions and red for harm to the viewer. Damage, zaps and other effects float over affected avatars; floating mini log panels are removed. Flags respond immediately, while cells and cards acknowledge pending actions until the server confirms results. The timer sits between the mine counter and reveal controls; new lobbies default to 15 seconds. Mine, zap, hit, shield and victory/high-risk-guess sounds are synthesized locally. The sound toggle and volume control apply to these cues as well as turn cues. Browser audio starts only after a user gesture.
 
 The built-in music uses a continuous original base, extra draft instruments and a different board-stage layer, with smooth transitions. Lobby and results keep the base. Custom audio remains local and is not uploaded. The results show shared flag payouts, omit Most Mines Hit when everyone has zero, and provide replay controls with synchronized activity. All mines, including hidden silent mines, are revealed only after the round ends; replay mine maps never appear in live snapshots.
 
@@ -111,6 +111,7 @@ Each entry is width × height / counted mines. Rounds 4 and 5 are used only in f
 | Extreme | 12 × 12 / 40 | 14 × 14 / 58 | 16 × 16 / 80 | 18 × 18 / 104 | 20 × 20 / 132 |
 
 Balance numbers are playtest starting points. The named constants in lib/balance.js, the score table in lib/solver.js and combat bonuses in lib/game.js are intended for tuning after human playtests.
+
 
 
 
