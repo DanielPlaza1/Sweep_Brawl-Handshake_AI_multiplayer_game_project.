@@ -82,6 +82,6 @@ Hosting documentation checked October 28, 2026: [Render Node guide](https://rend
 
 - GitHub source repository: https://github.com/DanielPlaza1/Sweep_Brawl-Handshake_AI_multiplayer_game_project. (the repository name ends with a period).
 - Working review game: https://sept-relatives-composed-asbestos.trycloudflare.com/ (temporary; this computer must stay on).
-- Sites: a private project is registered and its separate preparation checkout is under `sites/sweep-brawl/`. It is not published. The authoritative room engine must be adapted to persistent hosted state and a supported transport before publishing there. Never publish a static-only copy as a working multiplayer game.
+- Sites review: https://sweep-brawl.warmpearl1024.chatgpt.site (published, owner-only during review). Its separate checkout is under `sites/sweep-brawl/`. The hosted edition persists rooms in D1 with revision-checked writes, authenticates each seat, and updates connected players through polling. Local tests completed a three-round two-player game, scoring/final winner, privacy, concurrent actions, duplicate requests and reconnects. The production build passed; the deployed browser check requires the owner's ChatGPT sign-in.
 - The instructions below remain available for hosting the current Node/Socket.io edition on Render.
 
